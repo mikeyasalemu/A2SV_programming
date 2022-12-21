@@ -1,0 +1,13 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+nm = list(map(int, input().split()))
+li = input().split()
+A = set(input().split())
+B = set(input().split())
+ret = 0
+
+for i in li:
+    if i in A:
+        ret += 1
+    if i in B:
+        ret -= 1
+print (ret)
