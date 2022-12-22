@@ -8,13 +8,9 @@ class Solution:
 		right = 0
 		for i in range(len(arr)):
 		    if (right - left + 1) == K or right + 1 == N:
-		        new_val = list(reversed(arr[left:right + 1]))
-		      #  new_val = arr[left:right + 1:-1]
-		      #  print(new_val)
-		        arr[left:right + 1] = new_val
-		        left = right + 1
-		      
 		    
+		        arr[left:right + 1] = reversed(arr[left:right + 1])
+		        left = right + 1
 		    right += 1
 		return arr
 
