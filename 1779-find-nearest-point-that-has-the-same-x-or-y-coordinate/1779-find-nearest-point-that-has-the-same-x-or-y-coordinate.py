@@ -3,22 +3,15 @@ class Solution:
          result  = float(inf)
          hold = result
          ret = -1
-         valid = False
          for iterator,row in enumerate(points):
-                # print (iterator, row)
-                index1, index2 = row
-                # print (index1, index2)
-                if index1 == x or index2 == y:
-                    valid = True
-                    distance = abs( index1 - x)  + abs(y-index2)
+             
+                if row[0] == x or row[1] == y:
+                    distance = abs( row[0] - x)  + abs(y-row[1])
                     result = min(distance , result)
                     if result != hold:
                         hold = result
                         ret = iterator
                         
-               #    # print (abs(y - j))
-                # if valid == False:
-                #     result = -1
          return ret
               
         
