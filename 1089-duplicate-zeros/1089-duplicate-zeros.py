@@ -3,11 +3,12 @@ class Solution:
         """
         Do not return anything, modify arr in-place instead.
         """
-#         [0,4,1,0,0,8,0,0,3]
         size  = len(arr)
         index = 0
         count = 0
         
+#         count the occurrence of zero until find non zero number and 
+#         when we find, insert the zos upto their occrrence
         while index < size:
             if arr[index] == 0:
                 count +=1
