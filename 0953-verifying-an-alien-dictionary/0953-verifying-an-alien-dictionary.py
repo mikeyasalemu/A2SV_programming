@@ -7,7 +7,6 @@ class Solution:
 #       give the index of the order aphabet to dictionary
         for i in range(26):
             dic[order[i]] = i
-        
 #       replace the words by the value of their alphabet's index's
 #          ascii character 
         hold = "" 
@@ -17,7 +16,7 @@ class Solution:
                 hold += chr(97 + dic.get(ch))
             words[index] = hold
          
-#      check their order
+#       check their order
         for index in range(size -1):
             if words[index] > words[index +1]:
                 ret = False
