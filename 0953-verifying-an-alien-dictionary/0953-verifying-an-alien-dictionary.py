@@ -16,7 +16,6 @@ class Solution:
             for ch in word:
                 hold += chr(97 + dic.get(ch))
             words[index] = hold
-        print (words)
          
 #      check their order
         for index in range(size -1):
