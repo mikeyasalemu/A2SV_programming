@@ -3,9 +3,13 @@ class Solution:
         dic = {}
         size = len(words)
         ret = True
+        
+#       give the index of the order aphabet to dictionary
         for i in range(26):
             dic[order[i]] = i
-            
+        
+#       replace the words by the value of their alphabet's index's
+#          ascii character 
         hold = "" 
         for index , word in enumerate(words):
             hold = ""
@@ -14,6 +18,7 @@ class Solution:
             words[index] = hold
         print (words)
          
+#      check their order
         for index in range(size -1):
             if words[index] > words[index +1]:
                 ret = False
