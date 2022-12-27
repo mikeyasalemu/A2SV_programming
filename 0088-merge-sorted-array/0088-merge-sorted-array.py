@@ -12,7 +12,7 @@ class Solution:
             if index2 == n:
                 break
                 
-#           compare values from both list to put at the exact place
+#           compare values from both list to put at the exact place.
             elif nums2[index2] < nums1[index]:
                 nums1.insert(index, nums2[index2])
                 index2+=1
