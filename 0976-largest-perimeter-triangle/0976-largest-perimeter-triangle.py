@@ -1,5 +1,8 @@
 class Solution:
     def largestPerimeter(self, nums: List[int]) -> int:
+        
+        """first reverse of the numbers and check if the number in the left is grater th the             others""" 
+    
         nums.sort(reverse = True)
         
         size = len(nums)
