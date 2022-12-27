@@ -12,7 +12,7 @@ class Solution:
             if index2 == n:
                 break
             elif nums2[index2] < nums1[index]:
-                nums1.insert(index -1, nums2[index2])
+                nums1.insert(index, nums2[index2])
                 # index+=1
                 index2+=1
                 dif +=1
