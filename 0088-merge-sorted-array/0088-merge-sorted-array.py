@@ -19,7 +19,7 @@ class Solution:
                 dif +=1
                 nums1.pop()
                 
-#           if the numbers remaining in mums2 are all grater than nums1
+#           if the numbers remaining in mums2 are all grater than nums1.
             elif index >= dif:
                 nums1[index] = nums2[index2]
                 index2+=1
