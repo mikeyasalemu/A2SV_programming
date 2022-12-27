@@ -7,6 +7,7 @@ class Solution:
         index2 = 0
         size = len(nums1)
         dif = m
+        
 #         iterate until the size of nums1
         while index < size:
             if index2 == n:
