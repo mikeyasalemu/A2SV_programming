@@ -5,16 +5,19 @@ class Solution:
         hold = ""
         temp = ""
         ans = []
+#       iterate through the indexes of sources
         for  index  in range(size):
             
             temp = source[index]
             # print (temp, len(temp))
             itr = 0
+            
+#           iterate though each chaters and check the rules
             while itr < len(temp):
                 if itr < len(temp) -1 and temp[itr] == '/' and temp[itr+1] == '*' and block == False:
                     block = True
                     itr +=1
-                elif itr <len(temp) -1 and temp[itr] == '*' and  temp[itr + 1] == "/"and block == True:
+                elif itr <len(temp) -1 and temp[itr] == '*' and  temp[itr + 1] == "/" and block == True:
                     block = False
                     itr +=1
                 elif itr <len(temp) -1 and temp[itr] == '/' and  temp[itr + 1] == "/" and block == False:
@@ -22,6 +25,7 @@ class Solution:
                 elif block == False:
                     hold += temp[itr]
                 itr += 1
+                
             if block == False and hold:
                 ans.append(hold)
                 hold = ""
