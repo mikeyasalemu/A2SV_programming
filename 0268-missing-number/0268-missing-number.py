@@ -3,8 +3,8 @@ class Solution:
         
         sets = set(nums)
         size = len(sets)
-#       to find the sum of consequative numbers
-        # ret = int(size*(size + 1)/2)
+        
+#       to find the number that is not in the given set of list
         for num in range(size +1):
             if num not in sets:
                 return num
