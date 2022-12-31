@@ -1,8 +1,6 @@
 import numpy as np
 class Solution:
-    def onesMinusZeros(self, grid: List[List[int]]) -> List[List[int]]:
-       
-        
+    def onesMinusZeros(self, grid: List[List[int]]) -> List[List[int]]: 
         m = len(grid)
         n = len(grid[0])
         answer = np.zeros((m, n), int)
@@ -11,7 +9,7 @@ class Solution:
         
         for row in range(m):
             for clmn in range(n):
-                count_row[row] +=int(grid[row][clmn])
+                count_row[row] += grid[row][clmn]
             
         for clmn in range(n):
             for row in range(m):
