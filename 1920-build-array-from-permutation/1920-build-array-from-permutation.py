@@ -1,4 +1,3 @@
-import  numpy as np
 class Solution:
     def buildArray(self, nums: List[int]) -> List[int]:
         size = len(nums)
