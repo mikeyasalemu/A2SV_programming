@@ -4,7 +4,7 @@ class Solution:
         size = len(nums)
         ans = []
         
-        for index in range(size):
+        for index in range(0, size):
             num_index = nums[index]
             num = nums[num_index]
             ans.append(num)
