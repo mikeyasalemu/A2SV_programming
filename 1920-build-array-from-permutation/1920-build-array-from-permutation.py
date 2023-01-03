@@ -4,7 +4,8 @@ class Solution:
         ans = []
         
         for index in range(0, size):
-            
-            ans.append(nums[nums[index]])
+            num_index = nums[index]
+            num = nums[num_index]
+            ans.append(num)
         
         return ans
