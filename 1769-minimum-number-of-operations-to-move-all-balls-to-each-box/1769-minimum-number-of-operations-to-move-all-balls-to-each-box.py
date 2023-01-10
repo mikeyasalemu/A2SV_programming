@@ -6,6 +6,7 @@ class Solution:
         left_inc = 0
         right = 0
         left = 0
+        
 #         count the number of arrays in the right with value 1 and put their index sum 
         for i in range(size):
             if boxes[i] == '1':
