@@ -1,21 +1,26 @@
 class Solution:
     def minOperations(self, boxes: str) -> List[int]:
-        index_arr = []
         ans = []
         size = len(boxes)
+        right_dec = 0
+        left_inc = 0
+        right = 0
+        left = 0
         for i in range(size):
             if boxes[i] == '1':
-                index_arr.append(i)
-                
-        size2 = len(index_arr)
+                right += i
+                right_dec +=1
+        summ = 0       
         
         for i in range(size):
             summ = 0
-            
-            for j in range(size2):
-                if i != index_arr[j]:
-                    summ += abs(i - index_arr[j])
-                
+            summ = right + left
+           
+            if boxes[i] == '1':
+                right_dec -= 1
+                left_inc += 1
+            right -= right_dec 
+            left += left_inc
             ans.append(summ)
         return ans
             
