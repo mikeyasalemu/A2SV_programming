@@ -7,14 +7,13 @@ class Solution:
         
         for i in range(max_len):
             
-            j =  0
             string = ""
-            while j < size:
+            for  j in range(size):
                 if i >= len(arr[j]):
                     string += " "
                 else:
                     string += arr[j][i]
-                j+=1
+              
             string = string.rstrip(" ")
             ans.append(string)
         return ans
