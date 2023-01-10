@@ -14,7 +14,6 @@ class Solution:
                 else:
                     string += arr[j][i]
               
-            string = string.rstrip(" ")
-            ans.append(string)
+            ans.append(string.rstrip(" "))
         return ans
                 
