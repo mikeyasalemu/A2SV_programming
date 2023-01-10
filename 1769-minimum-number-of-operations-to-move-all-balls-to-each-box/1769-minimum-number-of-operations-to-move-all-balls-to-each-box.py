@@ -10,7 +10,6 @@ class Solution:
             if boxes[i] == '1':
                 right += i
                 right_dec +=1
-        summ = 0       
         
         for i in range(size):
             summ = 0
