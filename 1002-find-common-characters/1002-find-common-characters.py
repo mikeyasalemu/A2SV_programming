@@ -15,7 +15,6 @@ class Solution:
         ans = []
         
         for index in range(26):
-            for value in range(arr[index]):
-                ans.append(chr(index + 97))
+            ans += chr(index + 97) * arr[index]
         return ans
     
