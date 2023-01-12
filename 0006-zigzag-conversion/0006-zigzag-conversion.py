@@ -22,7 +22,7 @@ class Solution:
                     forward = True
                     ind += 1
         
-        res = []
+        res =[]
         for row in ans:
             res += row
             
