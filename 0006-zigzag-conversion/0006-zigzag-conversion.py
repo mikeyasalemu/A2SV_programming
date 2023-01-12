@@ -1,14 +1,13 @@
 class Solution:
     def convert(self, s: str, numRows: int) -> str:
-        ans = []
-        for i in range(numRows):
-            ans.append([])
+        ans = [''] * numRows
+        # for i in range(numRows):
+        #     ans.append([])
         ind = 0
         forward = True
         
         for i in range(len(s)):
-            ans[ind].append(s[i])
-            
+            ans[ind]+= s[i]
             if forward:
                 if ind < numRows-1:
                     ind +=1
@@ -21,10 +20,10 @@ class Solution:
                 else:
                     forward = True
                     ind += 1
-        
-        res =[]
-        for row in ans:
-            res += row
+        # print (ans)
+        # res =[]
+        # for row in ans:
+        #     res += row
             
-        return "".join(res)
+        return "".join(ans)
         
