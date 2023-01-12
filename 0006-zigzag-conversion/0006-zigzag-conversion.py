@@ -8,7 +8,6 @@ class Solution:
         
         for i in range(len(s)):
             ans[ind]+= s[i]
-            # print (ans)
            
             if forward:
                 if ind < numRows-1:
@@ -22,10 +21,7 @@ class Solution:
                 else:
                     forward = True
                     ind += 1
-        # print (ans)
-        # res =[]
-        # for row in ans:
-        #     res += row
+        
             
         return "".join(ans)
         
