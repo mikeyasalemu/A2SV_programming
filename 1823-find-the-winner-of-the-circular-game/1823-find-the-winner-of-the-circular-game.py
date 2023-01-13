@@ -8,6 +8,7 @@ class Solution:
             hold += k -1
             if hold >= len(arr):
                 hold = hold % len(arr)
-            arr.pop(hold)
+            del arr[hold]
+            # arr.pop(hold)
         return arr[0]
             
