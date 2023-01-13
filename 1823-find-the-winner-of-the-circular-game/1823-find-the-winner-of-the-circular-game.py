@@ -5,7 +5,6 @@ class Solution:
             arr.append(index)
         hold = 0
         while len(arr) > 1:
-            print(arr)
             hold += k -1
             if hold >= len(arr):
                 hold = hold % len(arr)
