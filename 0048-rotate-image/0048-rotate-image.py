@@ -3,7 +3,7 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
-        size = len(matrix)
+        
         matrix.reverse()
         i = 0
         for element in (zip(*matrix)):
