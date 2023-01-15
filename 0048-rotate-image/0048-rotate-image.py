@@ -8,7 +8,7 @@ class Solution:
         if side_length == 1 : 
             return 
         
-        for row in range(int(side_length/2)) : 
+        for row in range(side_length//2) : 
           
             col_lim = side_length - row - 1 
            
