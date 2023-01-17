@@ -13,7 +13,7 @@ class Solution:
             
                 
         for i in range(size):
-            for j in range(size -1):
+            for j in range(size -i-1):
                 if heights[j] < heights[j + 1]:
                     names[j], names[j+1] = names[j+1], names[j]
                     heights[j], heights[j+1] = heights[j+1],  heights[j]
