@@ -7,4 +7,3 @@ class Solution:
             if string2 != string:
                 count += 1
         return count
-#            
