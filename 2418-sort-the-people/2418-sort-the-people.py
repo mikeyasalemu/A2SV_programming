@@ -1,14 +1,17 @@
 class Solution:
     def sortPeople(self, names: List[str], heights: List[int]) -> List[str]:
         size = len(names)
-       
+#        Insertion sort
         for i in range(size):
-            index = i
-            for j in range(i +1, size):
-                if heights[index] < heights[j]:
-                    index = j
-            if i != index:
-                names[index], names[i] = names[i], names[index]
-                heights[i], heights[index] = heights[index],  heights[i]
-       
+            val  = heights[i]
+            val2 = names[i]
+            j = i -1
+            
+            while j >= 0 and val > heights[j]:
+                   
+                names[j +1] = names[j]
+                heights[j+1] = heights[j]
+                j -=1
+            names[j +1] = val2
+            heights[j+1] = val
         return names
