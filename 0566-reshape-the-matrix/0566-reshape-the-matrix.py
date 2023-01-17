@@ -6,10 +6,9 @@ class Solution:
         else:
             ans =[[] for i in range(r)]
             hold = [] * len(mat)
-            row = len(mat)
-            column = len(mat[0])
-            for i in range(row):
-                for j in range(column):
+            
+            for i in range(len(mat)):
+                for j in range(len(mat[0])):
                     hold.append(mat[i][j])  
             index = 0
             for i in range(r):
