@@ -15,7 +15,7 @@ class Solution:
                         break
                 else:
                     dic[i-j] = matrix[i][j]
-            if check == False:
+            if not check:
                 break
           return check
             
