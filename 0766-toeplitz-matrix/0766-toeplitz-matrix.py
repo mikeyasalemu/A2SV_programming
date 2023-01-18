@@ -2,10 +2,10 @@ class Solution:
     def isToeplitzMatrix(self, matrix: List[List[int]]) -> bool:
           dic = {}
           check = True
-          row = len(matrix)
-          column = len(matrix[0])
-          for i in range(row):
-            for j in range(column):
+          # row = len(matrix)
+          # column = len(matrix[0])
+          for i in range(len(matrix)):
+            for j in range(len(matrix[0])):
                 if matrix[i][j] == 0:
                     matrix[i][j] = 100
                     
@@ -17,6 +17,5 @@ class Solution:
                     dic[i-j] = matrix[i][j]
             if check == False:
                 break
-          print (list(dic))
           return check
             
