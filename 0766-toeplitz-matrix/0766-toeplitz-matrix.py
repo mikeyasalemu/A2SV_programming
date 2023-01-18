@@ -1,13 +1,22 @@
 class Solution:
     def isToeplitzMatrix(self, matrix: List[List[int]]) -> bool:
-        m, n = len(matrix), len(matrix[0])
-        check = True
-        for i in range(1, m):
-            for j in range(1, n):
-                if matrix[i][j] != matrix[i-1][j-1]:
-                    check = False
-                    break
-            if not check:
+          dic = {}
+          check = True
+          row = len(matrix)
+          column = len(matrix[0])
+          for i in range(row):
+            for j in range(column):
+                if matrix[i][j] == 0:
+                    matrix[i][j] = 100
+                    
+                if dic.get(i -j):
+                    if dic.get(i -j) != matrix[i][j]:
+                        check = False
+                        break
+                else:
+                    dic[i-j] = matrix[i][j]
+            if check == False:
                 break
-        return check
+          print (list(dic))
+          return check
             
