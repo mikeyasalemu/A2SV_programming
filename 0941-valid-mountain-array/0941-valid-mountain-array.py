@@ -9,13 +9,15 @@ class Solution:
                   elif inc:
                     if arr[i] > arr[i+1]:
                         if i == 0:
-                            return False
+                            ans = False
+                            break
                         else:
                             inc = False
                         
                   else:
                     if arr[i] < arr[i +1]:
-                        return False
+                        ans = False
+                        break
             if inc:
                 ans = False
             return ans
