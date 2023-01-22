@@ -3,14 +3,17 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        red = 0
-        for i in range(len(nums)):
-            if nums[i] == 0:
-                nums[i], nums[red] = nums[red], nums[i]
-                red+=1
-        white = red
-        for i in range(len(nums)):
-            if nums[i] == 1:
-                nums[i], nums[white] = nums[white], nums[i]
-                white+=1
+        red, white, blue = 0, 0, 0
+        for num in nums:
+            if num == 0:
+                red += 1
+            elif num == 1:
+                white += 1
+        for i in range(0, red):
+            nums[i] = 0
+        for i in range(red, red + white):
+            nums[i] = 1
+        for i in range(red + white, len(nums)):
+            nums[i] = 2
+        return nums
         
