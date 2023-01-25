@@ -12,7 +12,6 @@ class Solution:
                     return False
                 else:
                     row[i].add(cur)
-                    print(row)
                     col[j].add(cur)
                     sq[(i//3,j//3)].add(cur)
         return True
