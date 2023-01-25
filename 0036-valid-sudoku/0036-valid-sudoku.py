@@ -1,6 +1,5 @@
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
-        check = True
         #Column check
         for i in range(9):
             dic_column = {}
@@ -29,7 +28,7 @@ class Solution:
                             elif board[x][y] != ".":
                                 dic_box[board[x][y]] = 1
                 
-        return check
+        return True
         
        
         
