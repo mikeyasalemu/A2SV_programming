@@ -6,7 +6,8 @@ class Solution:
         count = 0
         if len(grid) < 3 or len(grid[0]) < 3:
             return 0
-        ###################################
+        #
+        #Iterating both for the column and row using two loops
         while row_end <= len(grid) -1:
             row +=1
             column_end = 2
