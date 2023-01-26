@@ -6,7 +6,6 @@ class Solution:
         size = len(nums)
         values = 0
         index = values + 1
-
         
         while index < size:
             
