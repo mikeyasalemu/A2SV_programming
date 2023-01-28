@@ -13,4 +13,4 @@ class Solution:
             if nums[i] == 1:
                 nums[i], nums[white] = nums[white], nums[i]
                 white+=1
-        
+            
