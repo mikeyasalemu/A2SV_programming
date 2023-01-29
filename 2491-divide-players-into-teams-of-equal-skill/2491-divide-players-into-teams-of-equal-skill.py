@@ -18,7 +18,7 @@ class Solution:
         else:
             ans = -1
             
-        return int(ans)
+        return ans
         
         
         
