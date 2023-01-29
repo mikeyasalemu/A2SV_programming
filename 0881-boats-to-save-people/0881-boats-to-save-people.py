@@ -7,9 +7,12 @@ class Solution:
         while i <= j:
             if people[i] +  people[j] <= limit :
                 i +=1
-                
-            ans +=1
-            j -=1
+                ans +=1
+                j -=1
+            else:
+                ans +=1
+                j -=1
+            
                
         return ans
         
