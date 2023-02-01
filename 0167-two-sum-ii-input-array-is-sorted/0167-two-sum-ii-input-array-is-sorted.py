@@ -8,7 +8,7 @@ class Solution:
                 break
             elif numbers[left] + numbers[right] > target:
                 right-=1
-            elif numbers[left] + numbers[right] < target:
+            else:
                 left +=1
         return [left+1, right+1]
         
