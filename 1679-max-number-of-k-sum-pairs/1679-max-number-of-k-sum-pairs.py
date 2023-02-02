@@ -16,7 +16,7 @@ class Solution:
                 dic[num] -= 1
             
             elif check == num and dic[check] > 1 :
-#                 if check and num are the same, use diefferent approach
+#              if check and num are the same, use diefferent approach
                 count +=1
                 dic[check] -=2
         
