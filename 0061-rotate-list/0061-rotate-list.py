@@ -25,7 +25,6 @@ class Solution:
         else:
             rot_val = k
         
-        print (rot_val)
         if rot_val == 0:
             return head
 #       to iterate upto the length thats going to be none
@@ -45,7 +44,6 @@ class Solution:
 #         add the rotated one to the original edited one
         hold.next = start
         head = hold_start
-        print(head)
         
         return head
         # print(size//k , head)
