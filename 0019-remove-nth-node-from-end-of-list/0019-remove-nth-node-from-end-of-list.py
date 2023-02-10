@@ -15,7 +15,7 @@ class Solution:
                 break
         dumy = ListNode(None)
         dumy.next = head
-        ret = dumy
+        head = dumy
         upto = count - n
         # print (upto)
         
@@ -31,5 +31,5 @@ class Solution:
                 dumy = dumy.next
                 i+=1
         # print (dumy)
-        return ret.next
+        return head.next
                 
