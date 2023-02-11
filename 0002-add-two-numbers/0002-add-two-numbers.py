@@ -16,7 +16,6 @@ class Solution:
                 rem = 1
                 num -= 10
             ans.val = num
-            
             if not l1.next and not l2.next and rem == 0:
                 break
             else:
@@ -32,9 +31,5 @@ class Solution:
             else:
                 l2.val = 0
             
-        # if rem > 0:
-        #     temp = ListNode(1)
-        #     ans.next = temp
-        #     ans = ans.next
         return  start
     
