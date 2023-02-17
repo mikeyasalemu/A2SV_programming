@@ -15,17 +15,10 @@ class Solution:
         if size > 2:
             for i in range(int(size/2)):
                 temp = ListNode(odd.next.val)
-                # print(temp)
                 odd.next = odd.next.next
                 temp.next = None
                 odd = odd.next
-
                 head.next = temp
-                # print (temp)
                 head = head.next
-                # print(ans)
-                # print(head)
-            
-     
-            
+
         return ans
