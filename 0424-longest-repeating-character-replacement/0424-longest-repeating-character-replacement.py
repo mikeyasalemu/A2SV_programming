@@ -14,12 +14,9 @@ class Solution:
                  if diff <= k:
                     ans = max(ans, right - left +1)
                  else:
-                    while left < right:
-                        if s[left] != ch:
-                            diff -= 1
-                            left+=1
-                            break
-                        left+=1
+                    if s[left] != ch:
+                        diff -= 1
+                    left+=1
                             
                  right +=1
         return ans
