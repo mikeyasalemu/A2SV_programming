@@ -6,14 +6,16 @@ class Solution:
         ans =0.0
         if k > len(nums):
             return 0
-        while right < k:
-            ans += nums[right]
-            right +=1
-        avg = ans
+       
         while right < len(nums):
-            avg = avg - nums[left] + nums[right]
-            ans = max(ans, avg)
-            right +=1
-            left +=1
+            if right < k:
+                ans += nums[right]
+                right +=1
+                avg = ans
+            else:
+                avg = avg - nums[left] + nums[right]
+                ans = max(ans, avg)
+                right +=1
+                left +=1
             
         return ans/k
