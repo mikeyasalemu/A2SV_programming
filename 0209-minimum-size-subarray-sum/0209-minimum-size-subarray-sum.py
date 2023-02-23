@@ -30,6 +30,6 @@ class Solution:
                 break
             right+=1
                     
-        # if ans == float('inf'):
-        #     return 0
-        return 0 if ans == float('inf') else ans
+        if ans == float('inf'):
+            return 0
+        return ans
