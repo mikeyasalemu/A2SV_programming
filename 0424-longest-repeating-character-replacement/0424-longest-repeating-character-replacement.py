@@ -1,7 +1,6 @@
 class Solution:
     def characterReplacement(self, s: str, k: int) -> int:
-        right = 0
-        left = 0
+        
         length = len(s)
         sets= set(s)
         ans = 0
