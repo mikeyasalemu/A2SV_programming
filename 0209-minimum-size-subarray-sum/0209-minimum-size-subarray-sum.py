@@ -9,19 +9,17 @@ class Solution:
                 summ += nums[right]
                 
             if summ >= target:
-                # print (left, right)
                 ans = min(ans, right - left +1)
                 if left < right:
                     
                     summ -= nums[left]
                     left+=1
-                    # print (nums[left], nums[right], summ)
+                    
                     while left <= right and summ >= target:
                          
-                         # print (nums[left])
                          if summ >= target:
-                             # print (nums[left])
                              ans = min(ans, right - left+1)
+                                
                          summ -= nums[left] 
                          left+=1
                 else:
@@ -32,6 +30,6 @@ class Solution:
                 break
             right+=1
                     
-        if ans == float('inf'):
-            return 0
-        return ans
+        # if ans == float('inf'):
+        #     return 0
+        return 0 if ans == float('inf') else ans
