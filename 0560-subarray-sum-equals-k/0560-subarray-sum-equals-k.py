@@ -3,6 +3,7 @@ class Solution:
         dic = defaultdict(int)
         count = 0
         add = 0
+        
         for num in nums:
             add += num
             check = add - k
