@@ -1,6 +1,6 @@
 class Solution:
     def scoreOfParentheses(self, s: str) -> int:
-        ans = 0
+        
         ans = []
         
         for i in range(len(s)):
