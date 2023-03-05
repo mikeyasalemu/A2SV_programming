@@ -3,9 +3,15 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        right = len(s) -1
-        left = 0
-        while right >= left:
-            s[right], s[left] = s[left], s[right]
-            right -= 1
-            left += 1
+        size = len(s) 
+        self.left = 0
+        self.right = size -1
+        s = self.helper(self.left, self.right, s) 
+    def helper(self,left, right, arr) -> list:
+        if left >= right:
+            return arr
+        arr[left], arr[right] = arr[right],arr[left]
+        left +=1
+        right -=1
+        return self.helper(left ,right, arr)
+            
