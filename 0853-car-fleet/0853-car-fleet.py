@@ -7,8 +7,7 @@ class Solution:
         stack = []
         for i in range(len(reach)):
             temp = (target - reach[i][0]) / reach[i][1]
-            if stack and temp <= stack[-1]:
-                continue 
-            stack.append(temp)
+            if not stack or stack[-1] < temp:
+                stack.append(temp)
         return len(stack)
         
