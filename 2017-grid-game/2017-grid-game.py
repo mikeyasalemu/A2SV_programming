@@ -3,9 +3,10 @@ class Solution:
         size = len(grid[0])
         first= list(accumulate(grid[0]))
         second= list(accumulate((grid[1][::-1])))[::-1]
-        minValue = float('inf')
+        # minValue = float('inf')
+        lst = []
                 
         for i in range(size):
-            minValue = min(minValue,max((first[-1]-first[i]) , (second[0]-second[i])))
+            lst.append(max((first[-1]-first[i]) , (second[0]-second[i])))
 
-        return minValue
+        return min(lst)
