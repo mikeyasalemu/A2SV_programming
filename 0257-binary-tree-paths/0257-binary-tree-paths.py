@@ -20,7 +20,7 @@ class Solution:
         if not root.right and not root.left:
             arr.append(s)
             return 
-        elif root:
+        if root:
             self.helper(root.left,arr,s)
             self.helper(root.right,arr,s)
             return 
