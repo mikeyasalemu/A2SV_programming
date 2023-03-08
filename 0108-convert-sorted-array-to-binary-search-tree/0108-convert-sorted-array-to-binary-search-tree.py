@@ -13,4 +13,3 @@ class Solution:
             mid = left + (right - left) // 2
             ans = TreeNode(self.nums[mid], self.helper(left,mid -1), self.helper(mid +1,right))
             return ans
-        # return ans
