@@ -17,4 +17,5 @@ class Solution:
         left  = self.helper(root.left,count+1)
         if abs(right - left) > 1:
             self.check = False
+            return 0
         return max(right,left)
