@@ -8,6 +8,8 @@ class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         dic = defaultdict(list)
         def helper(root,count,dic):
+            if not root:
+                return 
             if root:
                 dic[count].append(root.val)
                 left = helper(root.left,count+1,dic)
