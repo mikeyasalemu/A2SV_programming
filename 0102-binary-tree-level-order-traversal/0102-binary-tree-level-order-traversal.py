@@ -7,11 +7,11 @@
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         dic = defaultdict(list)
-        self.helper(root,0,dic)
+        def helper(root,count,dic):
+            if root:
+                dic[count].append(root.val)
+                left = helper(root.left,count+1,dic)
+                right = helper(root.right,count+1,dic)
+                
+        helper(root,0,dic)
         return list(dic.values())
-    def helper(self,root,count,dic):
-        if root:
-            dic[count].append(root.val)
-            left = self.helper(root.left,count+1,dic)
-            right = self.helper(root.right,count+1,dic)
-      
