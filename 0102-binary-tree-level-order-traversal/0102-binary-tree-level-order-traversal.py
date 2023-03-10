@@ -6,12 +6,12 @@
 #         self.right = right
 class Solution:
     def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
-        self.dic = defaultdict(list)
-        self.helper(root,0)
-        return list(self.dic.values())
-    def helper(self,root,count):
+        dic = defaultdict(list)
+        self.helper(root,0,dic)
+        return list(dic.values())
+    def helper(self,root,count,dic):
         if root:
-            self.dic[count].append(root.val)
-            left = self.helper(root.left,count+1)
-            right = self.helper(root.right,count+1)
+            dic[count].append(root.val)
+            left = self.helper(root.left,count+1,dic)
+            right = self.helper(root.right,count+1,dic)
       
