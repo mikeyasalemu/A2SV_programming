@@ -7,8 +7,7 @@
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        self.rightC = set()
-        self.leftC = set()
+       
         self.val = 0
         self.check = False
         self.helper(root,p,q)
