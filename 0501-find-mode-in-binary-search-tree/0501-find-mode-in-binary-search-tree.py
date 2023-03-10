@@ -8,7 +8,6 @@ class Solution:
     def findMode(self, root: Optional[TreeNode]) -> List[int]:
         self.dic = defaultdict(int)
         self.helper(root)
-        # print(self.dic)
         lst = list(sorted(self.dic.values(), reverse = True))
         freq = lst[0]
         ans = []
