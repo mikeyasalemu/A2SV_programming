@@ -10,10 +10,11 @@ class Solution:
         def helper(root,count,dic):
             if not root:
                 return 
-            if root:
-                dic[count].append(root.val)
-                left = helper(root.left,count+1,dic)
-                right = helper(root.right,count+1,dic)
-                
+            
+            dic[count].append(root.val)
+            left = helper(root.left,count+1,dic)
+            right = helper(root.right,count+1,dic)
+            
+            return 
         helper(root,0,dic)
         return list(dic.values())
