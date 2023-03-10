@@ -11,7 +11,7 @@ class Solution:
         self.helper(root,0)
         for lst in sorted(self.dic):
             ans.append(self.dic[lst])
-        print(self.dic)
+        # print(self.dic)
         return ans
 
     def helper(self,root,count):
