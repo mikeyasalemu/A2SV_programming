@@ -11,6 +11,5 @@ class Solution:
             else:
                 left = mid+1
         if check:
-            # print("yes")
             return len(citations) - left
         return 0
