@@ -6,7 +6,6 @@
 #         self.right = right
 class Solution:
     def widthOfBinaryTree(self, root: Optional[TreeNode]) -> int:
-        self.dic = defaultdict(int)
         self.dict = defaultdict(int)
         self.ans = 1
         self.helper(root,1,1)
