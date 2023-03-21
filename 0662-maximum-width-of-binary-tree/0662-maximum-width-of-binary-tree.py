@@ -19,7 +19,7 @@ class Solution:
             self.ans = max(self.ans, abs(self.dict[level] - count) +1)
         else:
             self.dict[level] = count
-            # self.ans = max(self.ans, count)
+            
         self.helper(root.left,(count*2) -1,level+1)
         self.helper(root.right,(count*2),level+1)
             
