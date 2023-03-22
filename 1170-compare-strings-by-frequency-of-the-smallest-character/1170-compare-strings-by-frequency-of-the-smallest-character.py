@@ -25,8 +25,6 @@ class Solution:
                     break
             w.append(freq)
         w.sort()
-        print(q)
-        print(w)
         ans = []
         for i in range(len(q)):
             left = 0
