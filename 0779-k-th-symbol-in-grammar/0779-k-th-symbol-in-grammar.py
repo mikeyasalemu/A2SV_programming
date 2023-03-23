@@ -1,12 +1,5 @@
 class Solution:
     def kthGrammar(self, n: int, k: int) -> int:
-        # if n == 1:
-        #     return 0
-        # if n == 2:
-        #     if k == 1:
-        #         return 0
-        #     return 1
-        # print(math.ceil(1//2))/
         check = self.helper(1, 1,n,k)
         if check[1] == True:
             return 1
@@ -17,7 +10,6 @@ class Solution:
                 return [abs((size//2) - k), True]
             else:
                 return [k, False]
-            
         temp = self.helper(size*2,count+1,n,k)
         if size > 1:
             if temp[0] > (size//2):
