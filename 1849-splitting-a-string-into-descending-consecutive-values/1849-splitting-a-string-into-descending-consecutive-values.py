@@ -1,8 +1,6 @@
 class Solution:
     def splitString(self, s: str) -> bool:
         self.check = False
-        self.st = True
-        # s = s.lstrip("0")
         self.helper(0,s,"0","0")
         
         return self.check
