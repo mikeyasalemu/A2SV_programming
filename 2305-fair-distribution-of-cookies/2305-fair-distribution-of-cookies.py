@@ -4,7 +4,6 @@ class Solution:
         st = [0]*k
         self.ans = sum(cookies)
         self.helper(cookies,k,st,0)
-        # print(self.hold)
         return self.ans
     def helper(self,cookies,k,st,ind):
         if ind == len(cookies):
