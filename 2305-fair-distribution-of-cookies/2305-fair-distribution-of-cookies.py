@@ -1,6 +1,6 @@
 class Solution:
     def distributeCookies(self, cookies: List[int], k: int) -> int:
-        # cookies.sort(reverse = True)
+        cookies.sort(reverse = True)
         st = [0]*k
         self.ans = sum(cookies)
         self.helper(cookies,k,st,0)
