@@ -5,17 +5,16 @@ class Solution:
         for node1, node2 in edges:
             graph[node1].append(node2)
             graph[node2].append(node1)
-        visited = set()
-        return self.dfs(source,visited,graph)
-    def dfs(self,node,visited,graph):
-        if node == self.destinition:
-            return True
-        
-        visited.add(node)
-        
-        for neighbour in graph[node]:
-            if neighbour not in visited:
-                found = self.dfs(neighbour,visited,graph)
-                if found:
-                    return True
+        print(graph)
+        stack = [source]
+        visited = set([source])
+        while stack:
+            node = stack.pop()
+            if node == destination:
+                return True
+            for neighbour in graph[node]:
+                if neighbour not in visited:
+                    stack.append(neighbour)
+                    visited.add(neighbour)
         return False
+       
