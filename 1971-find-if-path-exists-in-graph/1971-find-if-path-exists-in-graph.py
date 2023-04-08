@@ -5,7 +5,7 @@ class Solution:
         for node1, node2 in edges:
             graph[node1].append(node2)
             graph[node2].append(node1)
-        print(graph)
+            
         stack = [source]
         visited = set([source])
         while stack:
