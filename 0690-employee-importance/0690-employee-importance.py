@@ -17,16 +17,19 @@ class Solution:
         visited = set()
         for i in range(len(employees)):
             if employees[i].id == id:
-                self.calc(employees,i,visited)
+                return self.calc(employees,i,visited)
                 # print(employees[i].subordinates)
         # print()
-        return self.ans
+        # return self.ans
     def calc(self,employees,ind,visited):
-        self.ans+= employees[ind].importance
+        # self.ans+= employees[ind].importance
         visited.add(employees[ind].id)
+        if len(employees[ind].subordinates) == 0:
+            return employees[ind].importance
+        count = 0
         for subordinate in employees[ind].subordinates:
             for i in range(len(employees)):
                 if subordinate == employees[i].id and subordinate not in visited:
                     # print(subordinate)
-                    self.calc(employees,i,visited)
-                
+                    count+=self.calc(employees,i,visited)
+        return count+employees[ind].importance
