@@ -1,0 +1,31 @@
+tests = int(input())
+for i in range(tests):
+    size = int(input())
+    lst = list(map(int,input().split()))
+    ans = [0]
+    
+    
+    def mergeSort(left, right,ans):
+        if left == right:
+            return [lst[left]]
+        
+        mid = left + (right - left) // 2
+        left_half = mergeSort(left, mid,ans)
+        right_half = mergeSort(mid + 1, right,ans)
+        # print(left_half)
+        if left_half[0] > right_half[0]:
+            ans[-1] += 1
+            right_half.extend(left_half)
+            return right_half
+        left_half.extend(right_half)
+        return left_half
+        # return merge(left_half, right_half,ans)
+    
+    st = mergeSort(0,size -1,ans)
+    if st == sorted(lst):
+        print(ans[-1])
+    # print(st)
+    else:
+        print(-1)
+    
+    
