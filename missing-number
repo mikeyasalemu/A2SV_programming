@@ -1,0 +1,5 @@
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        total_sum = sum(nums)
+        exp = (len(nums)*(len(nums)+1))//2
+        return exp - total_sum
