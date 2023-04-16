@@ -6,13 +6,13 @@ class Solution:
         
         while left < right:
             middle = left + (right - left)//2
-            smallCount = 0
+            count = 0
 
             for i in range(size):
                 if nums[i] <= middle:
-                    smallCount += 1
+                    count += 1
             
-            if smallCount > middle:
+            if count > middle:
                 right = middle
             else:
                 left = middle+1
