@@ -4,22 +4,23 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-# Study the code ....
 class Solution:
     def pathSum(self, root: Optional[TreeNode], targetSum: int) -> int:
-        return self.dfs(root, 0, defaultdict(int, {0:1}), targetSum)
-    def dfs(self, node, prefix_sum, hash_table, target):
-        if not node:
+        self.count = 0
+        self.helper(root,targetSum,[])
+        return self.count
+    def helper(self,root,target,arr):
+        if not root:
             return 0
-
-        prefix_sum += node.val
-        count = 0
-        count += hash_table[prefix_sum - target]
+        arr.append(root.val)
+        left = self.helper(root.left,target,arr)
+        right = self.helper(root.right,target,arr)
         
-        hash_table_c = hash_table.copy()
-        hash_table_c[prefix_sum] += 1
-
-        left = self.dfs(node.left, prefix_sum, hash_table_c, target)
-        right = self.dfs(node.right, prefix_sum, hash_table_c, target)
-        print(node.val,left,right,count)
-        return left + right + count
+        temp = 0
+        for i in range(len(arr)-1,-1,-1):
+            temp+= arr[i]
+            if temp == target:
+                self.count +=1
+                
+        arr.pop()
+        return 0
