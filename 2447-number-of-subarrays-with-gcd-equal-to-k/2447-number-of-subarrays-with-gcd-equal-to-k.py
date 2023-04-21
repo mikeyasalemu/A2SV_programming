@@ -1,14 +1,14 @@
 class Solution:
     def subarrayGCD(self, nums: List[int], k: int) -> int:
-        count = 0
+        ans = 0
         size = len(nums)
         
-        for index,num in enumerate(nums):
+        for ind,num in enumerate(nums):
             current = num
-            j = index
+            j = ind
             while j < size and nums[j] % k == 0:
                 current = math.gcd(current,nums[j])
                 if current == k:
-                    count += 1
+                    ans += 1
                 j += 1
-        return count
+        return ans
