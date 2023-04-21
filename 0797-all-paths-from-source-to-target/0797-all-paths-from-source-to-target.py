@@ -20,5 +20,4 @@ class Solution:
             return
         
         dfs(0,[])
-        # print(ans)
         return ans
