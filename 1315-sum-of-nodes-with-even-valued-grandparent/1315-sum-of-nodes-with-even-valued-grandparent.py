@@ -8,7 +8,9 @@ class Solution:
     def sumEvenGrandparent(self, root: TreeNode) -> int:
         self.summ = 0
         self.helper(root)
+        
         return self.summ
+    
     def helper(self,root):
          if root:
             
@@ -17,6 +19,7 @@ class Solution:
                 
             self.helper(root.left)
             self.helper(root.right)
+            
     def adder(self,root1,root2):
         if root1:
             if root1.right:
