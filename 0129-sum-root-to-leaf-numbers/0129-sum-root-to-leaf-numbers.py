@@ -7,13 +7,10 @@
 class Solution:
     def sumNumbers(self, root: Optional[TreeNode]) -> int:
         self.ans = []
-        
         self.dfs(root,[])
-        print(self.ans)
         val = 0
         for num in self.ans:
             val+= int(num)
-        print(val)
         return val
     def dfs(self,root,arr):
         if not root:
