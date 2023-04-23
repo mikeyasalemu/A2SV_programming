@@ -29,5 +29,4 @@ class Solution:
                     if self.check:
                         for row,col in self.change:
                             board[row][col] = 'X'
-        # print(board)
                     
