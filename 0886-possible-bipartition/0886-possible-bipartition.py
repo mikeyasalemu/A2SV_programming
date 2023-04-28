@@ -12,7 +12,7 @@ class Solution:
         if n == 1:
             return True
         for val in self.dic.keys():
-            if val not in self.visited:
+            if val not in self.visited and self.ans:
                 self.dfs(val)
         return self.ans
     def dfs(self,node):
