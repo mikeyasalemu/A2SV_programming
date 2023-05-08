@@ -7,16 +7,21 @@ class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         ans = []
         for i in range(len(lists)):
-            while lists[i]:
-                heappush(ans,lists[i].val)
-                lists[i] = lists[i].next
+            if lists[i]:
+                heappush(ans ,(lists[i].val,i))
+           
                 
         ret = ListNode(None)
         check = ListNode(None)
         check.next = ret
         while ans:
-            temp = ListNode(heappop(ans))
+            val , node = heappop(ans)
+            temp = ListNode(val)
             ret.next = temp
             ret = ret.next
-        # print(check.next.next)
+            
+            if lists[node].next:
+                lists[node] = lists[node].next
+                heappush(ans,(lists[node].val, node))
+
         return check.next.next
