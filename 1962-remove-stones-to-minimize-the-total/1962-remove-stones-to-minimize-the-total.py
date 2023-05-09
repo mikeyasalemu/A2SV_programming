@@ -8,12 +8,12 @@ class Solution:
         
         while k > 0 and piles:
             temp = heappop(piles)
-            # print(temp)
+            
             ans -= (-temp//2)
             temp =-( ceil(-temp/2))
-            # print(ans)
+            
             if temp <= -2:
                 heappush(piles,temp)
             k-=1
-        # print(ans)
+            
         return ans
