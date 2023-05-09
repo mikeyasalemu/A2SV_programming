@@ -3,7 +3,6 @@ class Solution:
         dic = defaultdict(list)
         dic2 = defaultdict(deque)
         
-        check = set()
         for num1 , num2 in prerequisites:
             dic[num2].append(num1)
             dic2[num1].append(num2)
@@ -29,7 +28,7 @@ class Solution:
                             if not dic2[val]:
                                 queue.append(val)
                                 visited.add(val)
-        # print(ans)
+                                
         if len(ans) != numCourses:
             return False
         return True
