@@ -1,35 +1,31 @@
 class Solution:
     def findOrder(self, numCourses: int, prerequisites: List[List[int]]) -> List[int]:
         dic = defaultdict(list)
-        dic2 = defaultdict(deque)
-        
+        n = defaultdict(int)
         check = set()
         for num1 , num2 in prerequisites:
             dic[num2].append(num1)
-            dic2[num1].append(num2)
-            
+            n[num1] += 1
+            check.add(num1)
             
         visited = set()
         
         ans  = []
         for i in range(numCourses):
-            if i not in visited and not dic2[i]:
+            if i not in visited and i not in check:
                 queue = deque([i])
-                
                 visited.add(i)
                 while queue:
                     temp = queue.popleft()
-                    ans.append(temp)
+                    if n[temp] == 0:
+                        ans.append(temp)
                     
                     for val in dic[temp]:
-                        if val not in visited:
-                            if  dic2[val]:
-                                dic2[val].pop()
-                                
-                            if not dic2[val]:
-                                queue.append(val)
-                                visited.add(val)
-        # print(ans)
+                        if n[val]==1  and val not in visited:
+                            queue.append(val)
+                            visited.add(val)
+                        n[val] -= 1
+                        
         if len(ans) != numCourses:
             return []
         return ans
