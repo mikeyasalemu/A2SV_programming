@@ -1,21 +1,16 @@
 class Solution:
     def climbStairs(self, n: int) -> int:
-        dic = {}
-        dic[1] = 1
+        state = [0] * (n + 1)
         if n == 1:
             return 1
-        elif n == 2:
+        if n == 2:
             return 2
-        def DP(n):
-            if n == 1:
-                return 1
-            if n == 2:
-                return 2
-            
-            if n not in dic:
-                dic[n] = DP(n -1) + DP (n -2)
-            
-            return dic[n]
         
-        return DP(n)
+        state[1] = 1
+        state[2] = 2
         
+        
+        for i in range(3,n+1):
+            state[i] = state[i -1] + state[i -2]
+        
+        return state[-1]
