@@ -1,16 +1,19 @@
 class Solution:
     def fib(self, n: int) -> int:
-        dic = {}
+        num1 = 0
+        num2 = 1
         
-        def dp(n):
-            if n == 0:
-                return 0
-            if n == 1:
-                return 1
-            
-            if n not in dic:
-                dic[n] = dp(n-1)+dp(n-2)
-            
-            return dic[n]
+        if n == 0:
+            return 0
+
+        elif n == 1:
+            return 1
         
-        return  dp(n)
+        for i in range(2, n+1):
+            
+            temp = num2
+            num2 = num1 + num2
+            num1 = temp
+       
+        
+        return  num2
