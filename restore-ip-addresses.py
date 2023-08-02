@@ -1,7 +1,7 @@
 class Solution:
     def restoreIpAddresses(self, s: str) -> List[str]:
         st = []
-        
+       
         def rec(ind, arr):
             if ind < len(s) and len(arr) == 4:
                     return
@@ -13,20 +13,20 @@ class Solution:
                     st.append('.'.join(arr))
                 return
            
-            # temp = deepcopy(arr)
+            
             if s[ind] == '0':
                 arr.append('0')
                 rec(ind + 1, arr)
                 arr.pop()
             else:
-                for i in range(ind + 1, len(s) + 1):
-                    if 0 <= int(s[ind: i]) <= 255:
-                        arr.append(s[ind: i])
+                for i in range(ind+1, len(s)+1):
+                    if 0 <= (int(s[ind:i]))<= 255:
+                        arr.append(s[ind:i])
                         rec(i, arr)
                         arr.pop()
                     else:
-                        break
-            
+                        return
+                
 
         rec(0, [])
         # print(st)
